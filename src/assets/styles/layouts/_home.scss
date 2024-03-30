@@ -1,57 +1,573 @@
+@font-face {
+  font-family: 'Poiret One';
+  src: url('./assets/fonts/poiret-one/PoiretOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('./assets/fonts/Work_Sans/static/WorkSans-Regular.ttf');
+}
+
+title {
+  display: none;
+}
+
 * {
   box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+  display: block;
 }
+
+
+/*******BODY************/
 
 body {
+  margin: 0; 
+  padding: 0;
+  color: var(--texto);
+}
+.contenedor {
+  margin: auto;
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+/**NAVEGADOR**/
+.abrir__menu,
+.cerrar__menu {
+  display: none;
+}
+.main-nav{
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 1; 
+  margin: auto;
+  width: 100%;
+}
+.main-nav__list{
+  list-style-type: none;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.main-nav__item{
+  display: flex;
+  margin: auto;
+}
+
+.main-nav__link {
+  text-decoration: none;
+  color: var(--texto__video);
+  background-color: var(--hover--menu);
+  padding: 7px;
+  border-radius: 5px;
+  margin: 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-nav__link:hover {
+  background-color: var(--fondo__header);
+  text-decoration: underline;
+}
+/**VIDEO**/
+
+.video {
+  position: relative; 
+  margin: 0;
+  min-height: 70vh;
+  display: block;
+}
+.video__video {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-position: top;
+  left: 0;
+}
+.video__capa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+.video__textos {
+  position: absolute;
+  width: 100%;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  z-index: 1; 
+}
+
+.video__titulo {
+  font-family: 'Poiret One', sans-serif;
+  color: var(--texto__video);
+  font-size: 70px;
+  padding: 30px;
+}
+
+.video__texto {
+  color: var(--texto__video);
+  font-family: 'Poiret One', sans-serif;
+  font-size: 50px;
+  padding: 0 30px;
+}
+
+/**INFO**/
+
+.info {
+  width: 100%;
+  background-color: var(--fondo);
+}
+.info__textos {
+  display: grid;
+  margin: auto;
+  color: var(--texto);
+  font-size: 1rem;
+  font-weight: bold;
+  width: 85%;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+.info__titulo {
+  font-family: 'Poiret One', sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+
+}
+
+.info__texto {
+  font-family: 'Work Sans', sans-serif;
+}
+.info__cita {
+  font-family: 'Poiret One', sans-serif;
+
+}
+
+/**CARDS**/
+.contenedor__cards {
+  background-color: var(--fondo__contenedor--cards);
+  
+}
+
+.contenedor__cards--titulo {
+  font-family: 'Poiret One', sans-serif;
+  color: var(--titulo__swiper);
+  font-size: 2.5rem;
+  text-align: start;
+  min-height: fit-content;
+  display: flex;
+  padding: 30px 50px;
+}
+.swiper {
+  background-color: var(--fondo__contenedor--cards);
+  display: flex;
+  margin: auto;
+  align-items: baseline;
+  justify-content: center;
+  width: 90%;
+  gap: 20px;
+}
+.swiper-wrapper {
+  position: absolute;
+  display: flex;
+  background-color: var(--fondo__contenedor--cards);
+  margin-bottom: 10px;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  background-color: var(--fondo);
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem;
-  font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+  width: 100%;
+  min-height: 600px;
+  position: relative;
+  align-items: center;
 }
 
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
+.swiper__textos {
   text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items:center;
 }
-
-.uoc-logo {
+.swiper__img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
+  width: 100%;
+  height: 350px;
+  object-fit:cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
-  }
 }
-
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
-
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
-  }
+.swiper__titulo {
+  font-family: 'Poiret One', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--titulo__card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
+.swiper__texto {
+  line-height: 40px;
+  padding: 20px;
   text-align: center;
+  display: flex;
+  font-size: 18px;
+  flex-direction: column;
+  justify-content:flex-start;
+}
+.swiper__enlace {
+  text-decoration: none;
+  color: var(--titulo__swiper);
+}
+
+.swiper__enlace:hover {
+  color: var(--hover--menu);
+  text-decoration: underline;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--fondo__contenedor--cards) !important;
+  stroke: var(--texto) !important;
+  fill: var(--fondo) !important;
+  width: 20px;
+  height: 30px;
+}
+
+
+
+
+.franja__cambio--img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display:flex;
+  background-color: var(--fondo__contenedor--cards);
+
+}
+
+/****UBICACION*****/
+.contenedor__ubicacion {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  display: inline-block;
+  background-color: var(--fondo__contenedor--medios);
+}
+
+.contenedor__medios {
+  display: flex;
+  margin: auto;
+  align-items: baseline;
+  justify-content: center;
+  width: 90%;
+  gap: 20px;
+}
+
+.medio__card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--fondo);
+  position: relative;
+  align-items: center;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease-in-out;
+  border-radius: 20px;
+}
+.contenedor__titulo {
+  font-size: 2rem;
+  font-family: 'Poiret One', sans-serif;
+}
+
+.medio__icono {
+  font-size: 25px;
+  padding: 50px 0;
+}
+span {
+  font-family: 'Poiret One', sans-serif;
+  margin-top: 20px;
+  font-weight: bold;
+}
+.medio__texto {
+  font-size: 18px;
+  padding: 20px;
+  font-family: 'Work Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: center;
+  line-height: 2rem;
+
+}
+
+
+
+/*******FOOTER************/
+/* Estilos generales del footer */
+.footer {
+  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  background-image: url('./assets/images/Sintra pueblo.jpg');
+  background-color: rgba(0, 0, 0, 0.9);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--fondo);
+  padding: 30px; 
+  height: 60vh; 
+  display: flex; 
+}
+
+.footer__contenedor {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+  flex-wrap: wrap; 
+  margin: auto;
+  gap: 500px;
+}
+
+.bandera__img {
+  width: 100px;
+}
+
+.bloque-legal__link,
+.rrss__icono {
+  margin-right: 20px;
+  text-decoration: none;
+  color: var(--texto__video);
+  background-color: var(--hover--menu);
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.bloque-legal__link:hover,
+.rrss__icono:hover  {
+  background-color: var(--fondo__header); 
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.rrss__contenedor {
+  display: flex;
+  gap: 100px;
+  color: var(--fondo);
+}
+
+.rrss__img {
+  height: 50px;
+  width: auto;
+}
+
+/*******FORMATO RESPONSIVE********/
+/*MOBILE*/
+@media only screen and (max-width: 780px) {
+  .abrir__menu {
+      display: block;
+      border: 0;
+      cursor: pointer;
+      position: absolute;
+      z-index: 1;
+      color: var(--fondo);
+      font-size: 2rem;
+      right: 0;
+      margin: 20px;
+      background-color: transparent;
+  }
+  .cerrar__menu {
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    border: 0;
+    background-color: transparent;
+    color: var(--texto);
+    font-size: 1.5rem;
+    right: 0;
+    margin: 20px;
+}
+  .abrir__menu:hover, .cerrar__menu:hover {
+      background-color: var(--fondo__contenedor--cards);
+      padding: 10px;
+      border-radius: 15px;
+  }
+
+  .main-nav {
+      opacity: 0;
+      visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      gap: 1rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--fondo__contenedor--medios);
+      padding: 2rem;
+      box-shadow: 0 0 0 1000vmax rgba(0, 0, 0, .5);
+      border-radius: 0 0 15px 0;
+  }
+
+  .main-nav--visible {
+      opacity: 1;
+      visibility: visible;
+      z-index: 2;
+  }
+  .main-nav__list {
+      flex-direction: column;
+      align-items: end;
+
+  }
+  .main-nav__link {
+      color: var(--titulo__card);
+      background-color:transparent;
+      z-index: 2;
+      font-family: 'Poiret One', sans-serif;
+      font-size: 1.5rem;
+      border-radius: 15px;
+      padding: 10px;
+  }
+  .main-nav__link:hover {
+      color: var(--fondo__header);
+      font-size: 1.7rem;
+      background-color:var(--fondo__contenedor--cards);
+  }
+  /*TEXTO VIDEO*/
+  .video__titulo {
+      font-family: 'Poiret One', sans-serif;
+      color: var(--texto__video);
+      font-size: 50px;
+      padding: 10px;
+  }
+  
+  .video__texto {
+      color: var(--texto__video);
+      font-family: 'Poiret One', sans-serif;
+      font-size: 40px;
+      padding: 0 30px;
+  }
+  
+  /*INFO*/
+  .info__textos {
+      display: inline-block;
+      padding: 20px 10px;
+  }
+  .info__texto {
+      margin: auto;
+      font-size: 16px;
+  }
+  /*SWIPER*/
+  .swiper-slide {
+      min-height: 950px;
+  }
+  .swiper__textos {
+      min-height: 450px;
+  }
+  /*FRANJA CAMBIO*/
+  .franja__cambio--img {
+      width: 100%;
+      height: 80px;
+      object-fit: cover;
+  }
+  /*CÓMO LLEGAR*/
+  .contenedor__medios { /*768 2 filas coche 1 linea, tren y bus 2*/
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+  }
+  .medio__card {
+      min-height: auto;
+  } 
+}
+
+/*TABLETS*/
+
+@media only screen and (min-width: 800px) {
+  
+  /*SWIPER*/
+  .swiper-slide {
+      min-height: 1200px;
+  }
+  .swiper__textos {
+      min-height: 800px;
+  }
+  .swiper__enlace {
+      padding: 10px;
+  }
+  /*FRANJA CAMBIO*/
+  .franja__cambio--img {
+      width: 100%;
+      height: 70px;
+      object-fit: cover;
+  }
+  /*CÓMO LLEGAR*/
+  .contenedor__medios { 
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      width: 80%;
+  }
+  .medio__card {
+      min-height: 750px;
+  }    
+  .medio__texto {
+      padding: 20px;
+  } 
+}
+/*PANTALLAS GRANDES*/
+@media only screen and (min-width: 1220px) {
+  /*SWIPER*/
+  .swiper-slide {
+      min-height: 1000px;
+  }
+  .swiper__textos {
+      min-height: auto;
+
+  }
+  .swiper__enlace {
+      padding: 10px;
+  }
+  /*CÓMO LLEGAR*/
+  .medio__card {
+      height: auto;
+  }
+  .contenedor__medios { 
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      width: 60%;
+  }
+  .medio__texto {
+      min-height: 200px;
+      padding: 20px;
+  } 
+
 }
