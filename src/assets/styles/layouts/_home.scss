@@ -64,7 +64,7 @@ body {
 .main-nav__link {
   text-decoration: none;
   color: var(--texto__video);
-  background-color: var(--hover--menu);
+  background-color: var(--color__1);
   padding: 7px;
   border-radius: 5px;
   margin: 30px;
@@ -75,7 +75,7 @@ body {
 }
 
 .main-nav__link:hover {
-  background-color: var(--fondo__header);
+  background-color: var(--bg__hover);
   text-decoration: underline;
 }
 /**VIDEO**/
@@ -243,7 +243,7 @@ body {
 }
 
 .swiper__enlace:hover {
-  color: var(--hover--menu);
+  color: var(--color__1);
   text-decoration: underline;
 }
 
@@ -361,7 +361,7 @@ span {
   margin-right: 20px;
   text-decoration: none;
   color: var(--texto__video);
-  background-color: var(--hover--menu);
+  background-color: var(--color__1);
   padding: 15px;
   border-radius: 15px;
   font-size: 2rem;
@@ -370,7 +370,7 @@ span {
 
 .bloque-legal__link:hover,
 .rrss__icono:hover  {
-  background-color: var(--fondo__header); 
+  background-color: var(--bg__hover); 
   padding: 15px;
   border-radius: 15px;
 }
@@ -456,7 +456,7 @@ span {
       padding: 10px;
   }
   .main-nav__link:hover {
-      color: var(--fondo__header);
+      color: var(--bg__hover);
       font-size: 1.7rem;
       background-color:var(--fondo__contenedor--cards);
   }
