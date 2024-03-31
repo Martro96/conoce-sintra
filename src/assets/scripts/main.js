@@ -11,6 +11,8 @@
  */
 
 /*SWIPER*/
+import Swiper from 'swiper';
+
 new Swiper(".swiper", {
 	direction: "horizontal",
 	loop: true,

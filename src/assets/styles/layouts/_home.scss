@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Poiret One';
-  src: url('./assets/fonts/poiret-one/PoiretOne-Regular.ttf');
+  src: url('../fonts/poiret-one/PoiretOne-Regular.ttf');
 }
 
 @font-face {
   font-family: 'Work Sans';
-  src: url('./assets/fonts/Work_Sans/static/WorkSans-Regular.ttf');
+  src: url('../fonts/Work_Sans/static/WorkSans-Regular.ttf');
 }
 
 title {
@@ -330,7 +330,7 @@ span {
   align-items: center;
   justify-content: center;
   bottom: 0;
-  background-image: url('./assets/images/Sintra pueblo.jpg');
+  background-image: url('../images/Sintra\ pueblo.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
