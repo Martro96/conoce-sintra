@@ -53,8 +53,7 @@
     "stylelint-scss": "^6.2.1"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.5.1",
-    "parcel-bundler": "^1.8.1",
+    "@fortawesome/fontawesome-free": "^6.4.0",
     "swiper": "^11.1.0"
   }
 }
