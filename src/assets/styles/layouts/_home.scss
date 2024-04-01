@@ -275,7 +275,9 @@ body {
   display: inline-block;
   background-color: var(--fondo__contenedor--medios);
 }
-
+.ubiacion__mapa--mapa {
+  width: 100%;
+}
 .contenedor__medios {
   display: flex;
   margin: auto;
@@ -331,7 +333,7 @@ span {
   align-items: center;
   justify-content: center;
   bottom: 0;
-  background-image: url('../images/Sintra\ pueblo.jpg');
+  background-image: url('../images/Sintra-pueblo.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
