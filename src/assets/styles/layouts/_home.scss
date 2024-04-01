@@ -166,7 +166,8 @@ body {
 /**CARDS**/
 .contenedor__cards {
   background-color: var(--fondo__contenedor--cards);
-  
+  padding: 20px;
+
 }
 
 .contenedor__cards--titulo {
@@ -189,9 +190,9 @@ body {
 }
 .swiper-wrapper {
   position: absolute;
+  height: 100%;
   display: flex;
   background-color: var(--fondo__contenedor--cards);
-  margin-bottom: 10px;
 }
 
 .swiper-slide {
@@ -200,10 +201,10 @@ body {
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  width: 100%;
   min-height: 600px;
   position: relative;
   align-items: center;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);/*No sé cómo hacer el corte de abajo no tan abrupto*/
 }
 
 .swiper__textos {
@@ -211,6 +212,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items:center;
+  min-height: 400px; 
 }
 .swiper__img {
   display: block;
@@ -256,6 +258,7 @@ body {
   fill: var(--fondo) !important;
   width: 20px;
   height: 30px;
+  position: absolute;
 }
 
 .franja__cambio--img {
@@ -263,17 +266,23 @@ body {
   height: 150px;
   object-fit: cover;
   display:flex;
-  background-color: var(--fondo__contenedor--cards);
-
+  background-color: var(--fondo__contenedor--cards) !important;
+  z-index: 9;
+  position: relative;
 }
 
 /****UBICACION*****/
+.mapa {
+  width: 100%;
+  height: fit-content;
+}
 .contenedor__ubicacion {
   width: 100%;
   margin: auto;
   padding: 20px;
   display: inline-block;
   background-color: var(--fondo__contenedor--medios);
+  z-index: 9;
 }
 .ubiacion__mapa--mapa {
   width: 100%;
@@ -370,7 +379,7 @@ span {
 }
 
 .bandera__img {
-  width: 100px;
+  width: 130px;
 }
 
 .bloque-legal__link,
@@ -499,12 +508,10 @@ span {
       font-size: 16px;
   }
   /*SWIPER*/
-  .swiper-slide {
-      min-height: 950px;
+  .swiper {
+    min-height:950px;
   }
-  .swiper__textos {
-      min-height: 450px;
-  }
+  
   /*FRANJA CAMBIO*/
   .franja__cambio--img {
       width: 100%;
@@ -512,7 +519,7 @@ span {
       object-fit: cover;
   }
   /*CÓMO LLEGAR*/
-  .contenedor__medios { /*768 2 filas coche 1 linea, tren y bus 2*/
+  .contenedor__medios { 
       align-items: center;
       display: flex;
       flex-direction: column;
@@ -524,6 +531,9 @@ span {
   .footer {
     flex-direction: column;
   }
+  .bandera__img {
+    width: 100px;
+  }
 }
 
 
@@ -532,15 +542,10 @@ span {
 @media only screen and (min-width: 800px) {
   
   /*SWIPER*/
-  .swiper-slide {
-      min-height: 1200px;
+  .swiper {
+    min-height: 950px;
   }
-  .swiper__textos {
-      min-height: 800px;
-  }
-  .swiper__enlace {
-      padding: 10px;
-  }
+  
   /*FRANJA CAMBIO*/
   .franja__cambio--img {
       width: 100%;
@@ -552,41 +557,38 @@ span {
       align-items: center;
       display: flex;
       flex-direction: row;
-      width: 80%;
+      width: 100%;
   }
   .medio__card {
-      min-height: 750px;
+      min-height: 650px;
   }    
   .medio__texto {
       padding: 20px;
   } 
 }
 /*PANTALLAS GRANDES*/
-@media only screen and (min-width: 1220px) {
+@media only screen and (min-width: 900px) {
   /*SWIPER*/
-  .swiper-slide {
-      min-height: 1000px;
+  .swiper {
+    min-height: 1100px;
   }
-  .swiper__textos {
-      min-height: auto;
-
-  }
-  .swiper__enlace {
-      padding: 10px;
-  }
+  
   /*CÓMO LLEGAR*/
-  .medio__card {
-      height: auto;
-  }
   .contenedor__medios { 
       align-items: center;
       display: flex;
       flex-direction: row;
-      width: 60%;
+
   }
   .medio__texto {
-      min-height: 200px;
+      min-height: 250px;
       padding: 20px;
   } 
-
+}
+/*PANTALLAS MUY GRANDES*/
+@media only screen and (min-width: 1280px) {
+  /*SWIPER*/
+  .swiper {
+    min-height: 920px;
+  }
 }

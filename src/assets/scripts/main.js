@@ -39,7 +39,7 @@ new Swiper(".swiper", {
         spaceBetween: 30,
     },
     // when window width is >=900
-    900: {
+    915: {
         slidesPerView: 3,
         spaceBetween: 30
     }
