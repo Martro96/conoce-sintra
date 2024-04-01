@@ -271,7 +271,7 @@ body {
 .contenedor__ubicacion {
   width: 100%;
   margin: auto;
-  padding: 20px;
+  /*padding: 20px;*/
   display: inline-block;
   background-color: var(--fondo__contenedor--medios);
 }
@@ -407,7 +407,7 @@ span {
       border: 0;
       cursor: pointer;
       position: absolute;
-      z-index: 2;
+      z-index: 3;
       color: var(--fondo);
       font-size: 2rem;
       right: 0;
