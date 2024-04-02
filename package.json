@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/uoc-advanced-html-css/uoc-boilerplate/issues"
   },
-  "homepage": "https://github.com/Martro96/HTML-y-CSS-II---PEC-1/blob/49f44f5ac7c83bc61eab2a2ff2f8bc9e7cacbaff/dist/index.html", 
+  "homepage": "https://conoce-sintra.netlify.app/", 
   "devDependencies": {
     "@parcel/resolver-glob": "^2.12.0",
     "@parcel/transformer-sass": "^2.11.0",
