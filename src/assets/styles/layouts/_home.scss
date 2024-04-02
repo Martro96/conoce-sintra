@@ -166,7 +166,6 @@ body {
 /**CARDS**/
 .contenedor__cards {
   background-color: var(--fondo__contenedor--cards);
-  padding: 20px;
   z-index: 1;
 }
 
@@ -530,8 +529,12 @@ span {
   }
   /*SWIPER*/
   .swiper {
-    min-height:950px;
+    min-height: 1100px;
   }
+  .swiper-slide {
+    min-height: 1000px;
+  }
+  
   
   /*FRANJA CAMBIO*/
   .franja__cambio--img {
@@ -560,11 +563,14 @@ span {
 
 /*TABLETS*/
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 781px) {
   
   /*SWIPER*/
   .swiper {
-    min-height: 950px;
+    min-height: 1100px;
+  }
+  .swiper-slide {
+    min-height: 1000px;
   }
   
   /*FRANJA CAMBIO*/
@@ -588,10 +594,16 @@ span {
   } 
 }
 /*PANTALLAS GRANDES*/
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 900px) { 
   /*SWIPER*/
   .swiper {
+    min-height: 1200px;
+  }
+  .swiper-slide {
     min-height: 1100px;
+  }
+  .swiper__textos {
+    min-height: 800px;
   }
   
   /*CÓMO LLEGAR*/
@@ -607,9 +619,15 @@ span {
   } 
 }
 /*PANTALLAS MUY GRANDES*/
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1200px) { 
   /*SWIPER*/
   .swiper {
-    min-height: 920px;
+    min-height: 1000px;
+  }
+  .swiper-slide {
+    min-height: 700px;
+  }
+  .swiper__textos {
+    min-height: 600px;
   }
 }
