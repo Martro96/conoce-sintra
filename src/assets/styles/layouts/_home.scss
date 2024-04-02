@@ -273,7 +273,7 @@ body {
   color: var(--fondo__contenedor--cards) !important;
   stroke: var(--texto) !important;
   fill: var(--fondo) !important;
-  z-index: 1000; 
+  z-index: 1000 !important; 
 }
 .swiper-button-next {
   right: 10px; 
